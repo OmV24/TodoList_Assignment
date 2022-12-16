@@ -1,11 +1,22 @@
 
 # Todolist
+TodoList Web App using Cowboy Server.
+
+Technologies used:
+Elixir 1.14 
+Plug - Cowboy 2.5.2 
+Ecto 3.1 
+Postgresql 
+HTML 5 
+CSS
+
+# OUTPUT
 
 1) Create mix project using: mix new . get --sup --app todolist 
 
 2) Adding Dependencies:
 
-  ![image](https://user-images.githubusercontent.com/100900392/207044893-602f0491-e129-4109-a3d1-4b33bdca5f83.png)
+   ![image](https://user-images.githubusercontent.com/100900392/207044893-602f0491-e129-4109-a3d1-4b33bdca5f83.png)
  
    Save dependencies: mix deps.get
  
@@ -19,36 +30,38 @@
 
 5) Run the project using: mix run --no-halt
 
-6) The Todo List is generated 
+6) The Todo List is generated: 
+
+   ![image](https://user-images.githubusercontent.com/100900392/208075698-5dd1a9d6-d225-4c3c-850e-1f7d328ffd01.png)
+
+7) Adding Tasks:
    
-   For static todolist uncomment the javascript part in todohtml.html.
+   ![image](https://user-images.githubusercontent.com/100900392/208076149-8b9bd002-0560-4f36-a2b3-0f236345622a.png)
+
+8) Updating Tasks:
     
-   ![image](https://user-images.githubusercontent.com/100900392/207047162-b08d5fde-a685-4f52-bddf-50ddbbd9db29.png)
+   ![image](https://user-images.githubusercontent.com/100900392/208076407-07e5b4a9-047c-41f6-8364-d41f34fccde3.png)
+
+    After Updating:
+    
+   ![image](https://user-images.githubusercontent.com/100900392/208076533-66a21bcd-c6a0-454b-b807-3321729883ae.png)
    
-7) Creating Repo, Databse & schemas using ecto:
+9) Deleting Tasks:
+
+   ![image](https://user-images.githubusercontent.com/100900392/208077046-0c7e78d7-1feb-4a7f-9d12-5f7c5dc5744c.png)
    
-   ![image](https://user-images.githubusercontent.com/100900392/207048751-85409061-3836-48ef-91ba-70bb7a808c0d.png)
+10) Database:
 
-   ![image](https://user-images.githubusercontent.com/100900392/207048863-6880f1a5-a87c-4809-a4e9-74f874c07204.png)
-
-   ![image](https://user-images.githubusercontent.com/100900392/207048961-26a6d32a-5e1b-4c34-b141-c2b2d0f5a76d.png)
-
-8) For dynamic todolist: 
-  
-   ![image](https://user-images.githubusercontent.com/100900392/207047593-130476d6-9006-44ba-9833-b12b51ee063e.png)
-     
-   We get the output in the terminal & is stored in database.
-     
-   ![image](https://user-images.githubusercontent.com/100900392/207048079-b75be378-c040-46e5-b5af-9548c4790bd8.png)
-
-   ![image](https://user-images.githubusercontent.com/100900392/207048154-535e1ec8-5e42-4d4a-a002-61d4595c693d.png)
-
-9) Testing using Ecto:
+   ![image](https://user-images.githubusercontent.com/100900392/208077494-263735cf-bf5c-4a32-b8e7-efe311ab24b7.png)
+   
+11) Testing using Ecto:
 
    ![image](https://user-images.githubusercontent.com/100900392/207049415-9760dfbd-1b13-4944-b429-aee620965742.png)
 
 # Features:
+
 1) Creating a web Server application using Cowboy.
 2) Creating database & schemas using ecto.
 3) Testing using Ecto.
+4) Performing CRUD Operations.
 
