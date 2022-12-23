@@ -67,7 +67,7 @@ Technologies used:
 
 # Setup:
 
-1) 1) Create mix project using: $ mix new . get --sup --app todolist
+1) Create mix project using: $ mix new . get --sup --app todolist
 2) Install the Mix dependencies: $ mix deps.get
 3) Create and migrate the development database: $ mix ecto.setup
 4) Start the application with all its dependencies: $ iex.bat -S mix
