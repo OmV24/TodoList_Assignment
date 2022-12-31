@@ -1,66 +1,47 @@
 import Todolist
-import Ecto.Query
+import Ecto.Query                     # Queries are used to retrieve and manipulate data from a repository.
+import Ecto.Changeset                 # In order to insert, update or delete data from the database, Ecto.Repo.insert/2, update/2 and delete/2 require a changeset as their first parameter.
 defmodule Tododb do
-  def add_task(task) do
-    added_task = %Todolist{task_name: task}
+  def add_task(task) do               # Inserting Data.
+    added_task = %Todolist{task_name: task, task_status: "incomplete"}
     TodoList.Repo.insert(added_task)
   end
-
   def changeset(task , params \\ %{}) do
     task
-    |> Ecto.Changeset.cast(params , [:task_name])
-    |> Ecto.Changeset.validate_required([:task_name])
+    |> cast(params , [:task_name, :task_status])
+    |> validate_required([:task_name, :task_status])
   end
-
-  def update_task(id,task) do
+  def update_task(id,task) do         # Updating Data.
     old_task = Todolist |> TodoList.Repo.get(id)
-    IO.inspect(old_task)
+    IO.inspect(old_task)              # Gives id, old task name.
     old_task
-    |> changeset(%{task_name: task})
+    |> changeset(%{task_name: task})  # This changeset says that on the specified Task object, we're looking to make some changes.
     |> TodoList.Repo.update()
   end
-
-  def delete_task(id) do
+  def delete_task(id) do              # Deleting Data.
     old_task = Todolist |> TodoList.Repo.get(id)
+    IO.puts("status is #{old_task.task_status}")
     old_task
     |> TodoList.Repo.delete()
   end
-
-  def len() do
-    query = from task_name in Todolist ,
-          select: task_name
+  def select_all() do
+    query = from task_name in Todolist  # runs a loop & returns all tasks.
     TodoList.Repo.all(query)
   end
-  def default() do
-    TodoList.Repo.insert_all(Todolist,[
-      %{task_name: "Add Task " },
-      %{task_name: "Add Task " },
-      %{task_name: "Add Task " },
-      %{task_name: "Add Task " }
-    ])
-  end
 
-  def show_task() do
-    if length(len()) == 0 do
-      default()
-    end
-    query = from task_name in Todolist ,
-      order_by: [asc: :id],
-      select: task_name
-    data = TodoList.Repo.all(query)
-    tasks = data|> Enum.map(&(&1.task_name))
-    _= Enum.take(tasks, -4)
-  end
-
-  def show_id() do
-    if length(len())==0 do
-      default()
-    end
-    query = from task_name in Todolist ,
-      order_by: [asc: :id],
-      select: task_name
-    data = TodoList.Repo.all(query)
-    ids = data|> Enum.map(&(&1.id))
-    _= Enum.take(ids, -4)
-  end
+  # def task_status(id) do         # Updating Data.
+  #   old_task = Todolist |> TodoList.Repo.get(id)
+  #   IO.puts("status is #{old_task.task_status}")
+  #   if old_task.task_status == "incomplete" do              # Gives id, old task name.
+  #     old_task
+  #     |> changeset(%{task_status: "complete"})  # This changeset says that on the specified Task object, we're looking to make some changes.
+  #     |> TodoList.Repo.update()
+  #   else
+  #     old_task
+  #     |> changeset(%{task_status: "incomplete"})  # This changeset says that on the specified Task object, we're looking to make some changes.
+  #     |> TodoList.Repo.update()
+  #   end
+  #   old_task = Todolist |> TodoList.Repo.get(id)
+  #   IO.puts("after changing is #{old_task.task_status}")
+  # end
 end

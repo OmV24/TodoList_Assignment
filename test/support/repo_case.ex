@@ -1,3 +1,6 @@
+'''
+The case template above brings Ecto and Ecto.Query functions into your tests and checks-out a database connection.
+'''
 defmodule TodoList.RepoCase do
   use ExUnit.CaseTemplate
 

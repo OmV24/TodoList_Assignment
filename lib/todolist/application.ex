@@ -2,14 +2,13 @@ defmodule Todolist.Application do
 
   @moduledoc false
 
-  require Logger
+  require Logger                          # Provides debug, info, warn, and error levels.
   use Application
 
   @impl true
   def start(_type, _args) do
-    # start_cowboy()
     children = [
-      TodoList.Repo,
+      TodoList.Repo,                      # Starts the Ecto process which receives and executes our application's queries.
       {Plug.Cowboy, scheme: :http, plug: Todolist.Router, options: [port: 8000]}
     ]
     Logger.info("Todo List is running!!")
