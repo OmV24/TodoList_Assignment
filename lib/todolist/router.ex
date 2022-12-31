@@ -47,15 +47,6 @@ defmodule Todolist.Router do
       send_resp(conn, 200, body)
   end
 
-  # get "/status" do
-  #   conn = Plug.Conn.fetch_query_params(conn)
- 	# 	id = Map.fetch!(conn.params, "id")
-  #   IO.puts("#{id}")
-  #   task_status(id)
-  #   body=EEx.eval_file "lib/templates/todohtml.html.leex"
-  #   send_resp(conn, 200, body)
-  # end
-
   match _ do
     send_resp(conn,404,"ERROR 404!!!")
   end
