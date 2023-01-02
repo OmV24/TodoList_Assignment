@@ -24,7 +24,8 @@ defmodule Tododb do
     |> TodoList.Repo.delete()
   end
   def select_all() do
-    query = from task_name in Todolist  # Runs a loop & returns all tasks.
+    query = from task_name in Todolist , # Runs a loop & returns all tasks.
+    order_by: [desc: :id]
     TodoList.Repo.all(query)
   end
 end
