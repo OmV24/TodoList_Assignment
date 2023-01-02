@@ -36,25 +36,25 @@ Technologies used:
 
 7) Adding Tasks:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210199906-52633193-1780-498b-b724-215a06747aae.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210203720-038e346b-96d8-46ad-82c4-965bc4055140.png)
 
 8) Updating Tasks:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210200306-1930ea1b-1107-47ac-a3bb-0ea16ceeabb9.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210203783-ec263da3-b845-4103-8b91-dfc8ee3aa06e.png)
 
     After Updating:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210200014-d1392904-0191-4d7e-96fb-39f9cbaab57b.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210203818-85fdc3f9-2ee6-452f-82bb-0e25b3647c4d.png))
    
 9) Deleting Tasks:
 
    Before Deleting:
 
-   ![image](https://user-images.githubusercontent.com/100900392/210200077-1a4217c3-5fbe-45d8-9b67-48de353c726e.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210203851-4b55c99f-e682-4feb-bc3e-4b4d1e9ba433.png)
 
    After Deleting:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210200131-606d5d67-165c-484b-a7b9-48dee998035d.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210203875-6e228d74-57f9-43a8-b155-82f42440d377.png)
    
 10) Database:
 
