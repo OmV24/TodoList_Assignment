@@ -1,6 +1,6 @@
 import Todolist
 import Ecto.Query                     # Queries are used to retrieve and manipulate data from a repository.
-import Ecto.Changeset                 # In order to insert, update or delete data from the database, Ecto.Repo.insert/2, update/2 and delete/2 require a changeset as their first parameter.
+import Ecto.Changeset                 # changesets provide a way for track and validate changes before they are applied to the data.
 defmodule Tododb do
   def add_task(task) do               # Inserting Data.
     added_task = %Todolist{task_name: task}

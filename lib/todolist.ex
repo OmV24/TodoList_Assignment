@@ -1,7 +1,7 @@
 defmodule Todolist do
   use Ecto.Schema
 
-  schema "todo" do            # This defines the schema from the database that this schema maps to.
+  schema "todo" do
     field :task_name, :string
   end
 end
