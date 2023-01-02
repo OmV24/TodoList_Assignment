@@ -77,7 +77,7 @@ Technologies used:
 2) Install the Mix dependencies: $ mix deps.get
 3) Create the development database: $ mix ecto.create
 4) Migrate the development database: $ mix ecto.migrate
-5) Start the application with all its dependencies: $ iex.bat -S mix
+5) Start the application: $ mix run --no-halt
 6) Start the localhost:8000 on browser
 7) For unit testing - mix test
 
