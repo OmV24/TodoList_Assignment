@@ -34,7 +34,7 @@ Technologies used:
 
 6) Adding Tasks:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210223443-85c0cd28-8263-4ba8-bd31-f801ed40ffb1.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210243575-87296efd-3580-4e18-b8a6-791e4e926596.png)
 
 7) Updating Tasks:
     
