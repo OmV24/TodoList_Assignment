@@ -40,7 +40,7 @@ Technologies used:
 
 8) Updating Tasks:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210199981-65db4c2f-4c6c-4392-afd5-2976c9758238.png
+   ![image](https://user-images.githubusercontent.com/100900392/210200306-1930ea1b-1107-47ac-a3bb-0ea16ceeabb9.png)
 
     After Updating:
     
