@@ -32,29 +32,29 @@ Technologies used:
 
 6) The Todo List is generated: 
 
-   ![image](https://user-images.githubusercontent.com/100900392/210199853-f2f483c9-ee20-41e0-9de6-457fe7bfa9da.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210222616-a59b48f4-daa0-430d-83f8-3c651191985f.png)
 
 7) Adding Tasks:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210203720-038e346b-96d8-46ad-82c4-965bc4055140.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210223443-85c0cd28-8263-4ba8-bd31-f801ed40ffb1.png)
 
 8) Updating Tasks:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210203783-ec263da3-b845-4103-8b91-dfc8ee3aa06e.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210224655-5014495c-21f1-45e7-97bb-642f6dc12173.png)
 
     After Updating:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210203818-85fdc3f9-2ee6-452f-82bb-0e25b3647c4d.png))
+   ![image](https://user-images.githubusercontent.com/100900392/210224723-c611d14d-d2ee-4a15-886a-4de95c95dc66.png)
    
 9) Deleting Tasks:
 
    Before Deleting:
 
-   ![image](https://user-images.githubusercontent.com/100900392/210203851-4b55c99f-e682-4feb-bc3e-4b4d1e9ba433.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210224739-5a2fd4b3-b914-4caf-aa7e-b7ca370b2c6c.png)
 
    After Deleting:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210203875-6e228d74-57f9-43a8-b155-82f42440d377.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210224778-7aea1b4f-e4c5-43d8-9920-ebce4f0865d7.png)
    
 10) Database:
 
