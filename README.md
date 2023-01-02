@@ -32,7 +32,7 @@ Technologies used:
 
 6) The Todo List is generated: 
 
-   ![image](https://user-images.githubusercontent.com/100900392/210199853-f2f483c9-ee20-41e0-9de6-457fe7bfa9da.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210222616-a59b48f4-daa0-430d-83f8-3c651191985f.png)
 
 7) Adding Tasks:
    
