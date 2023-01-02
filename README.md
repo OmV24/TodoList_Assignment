@@ -32,27 +32,33 @@ Technologies used:
 
 6) The Todo List is generated: 
 
-   ![image](https://user-images.githubusercontent.com/100900392/208075698-5dd1a9d6-d225-4c3c-850e-1f7d328ffd01.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210199853-f2f483c9-ee20-41e0-9de6-457fe7bfa9da.png)
 
 7) Adding Tasks:
    
-   ![image](https://user-images.githubusercontent.com/100900392/208076149-8b9bd002-0560-4f36-a2b3-0f236345622a.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210199906-52633193-1780-498b-b724-215a06747aae.png)
 
 8) Updating Tasks:
     
-   ![image](https://user-images.githubusercontent.com/100900392/208076407-07e5b4a9-047c-41f6-8364-d41f34fccde3.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210200306-1930ea1b-1107-47ac-a3bb-0ea16ceeabb9.png)
 
     After Updating:
     
-   ![image](https://user-images.githubusercontent.com/100900392/208076533-66a21bcd-c6a0-454b-b807-3321729883ae.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210200014-d1392904-0191-4d7e-96fb-39f9cbaab57b.png)
    
 9) Deleting Tasks:
 
-   ![image](https://user-images.githubusercontent.com/100900392/208077046-0c7e78d7-1feb-4a7f-9d12-5f7c5dc5744c.png)
+   Before Deleting:
+
+   ![image](https://user-images.githubusercontent.com/100900392/210200077-1a4217c3-5fbe-45d8-9b67-48de353c726e.png)
+
+   After Deleting:
+   
+   ![image](https://user-images.githubusercontent.com/100900392/210200131-606d5d67-165c-484b-a7b9-48dee998035d.png)
    
 10) Database:
 
-   ![image](https://user-images.githubusercontent.com/100900392/208077494-263735cf-bf5c-4a32-b8e7-efe311ab24b7.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210200166-8120489a-1ec2-479b-abfb-8c9277e178ad.png)
    
 11) Unit Testing for Ecto:
 
@@ -69,8 +75,9 @@ Technologies used:
 
 1) Create mix project using: $ mix new . get --sup --app todolist
 2) Install the Mix dependencies: $ mix deps.get
-3) Create and migrate the development database: $ mix ecto.setup
-4) Start the application with all its dependencies: $ iex.bat -S mix
-5) Start the localhost:8000 on browser
-6) For unit testing - mix test
+3) Create the development database: $ mix ecto.create
+4) Migrate the development database: $ mix ecto.migrate
+5) Start the application with all its dependencies: $ iex.bat -S mix
+6) Start the localhost:8000 on browser
+7) For unit testing - mix test
 
