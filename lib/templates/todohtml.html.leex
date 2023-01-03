@@ -212,7 +212,7 @@ a:hover, a:active {
 		<div class = "tasklist">
 		<%=todo.task_name%>
 		<a type="button" class="delete" href="delete?delete_data=<%= todo.id %>">Delete</a>
-		<a type="button" class="edit" href="edit?id=<%= todo.id %>">Edit</a>
+		<a type="button" class="edit" href="edit?id=<%= todo.id %>&edit_data=<%= todo.task_name%>">Edit</a>
 		<br>
 		<br>
 		<hr style = "border: 1px solid white;">

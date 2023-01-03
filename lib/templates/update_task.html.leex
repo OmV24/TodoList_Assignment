@@ -49,6 +49,8 @@ h3 {
 input,
 button {
 	outline: 10px;
+	background-color: cyan;
+	border: 0px;
 }
 
 button {
@@ -195,10 +197,13 @@ a:hover, a:active {
 <body>
     <div class="container">
       <h2>Update Task</h2>
-        <form action ="update" class = "form" method ="get" >
-        <input value="<%=hi%>" type=hidden name ="id" class = "update"/>
-			<input type="text" id="new-task" name = "edit_data">
-            <button>Update</button>
-		</form>
+		<br>
+		<form name="form" action="update" method="get">
+        <input id="id" type="text" value=<%=id%> name="id" hidden>
+		<div name="edit_data"> <b>Task to be updated -  </b><%= edit_data %></div>
+		<br>
+            <input id="new-task" name="edit_data" type="text">
+            <button type="submit">Update</button>
+        </form>
   </body>
 </html>

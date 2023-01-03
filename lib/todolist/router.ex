@@ -34,14 +34,15 @@ defmodule Todolist.Router do
   get "/edit" do
     conn = Plug.Conn.fetch_query_params(conn)
     id = Map.fetch!(conn.params, "id")
-    body=EEx.eval_file "lib/templates/update_task.html.leex",[hi: id]
+    task = to_string(Map.fetch!(conn.params, "edit_data"))
+    body=EEx.eval_file "lib/templates/update_task.html.leex",[id: id , edit_data: task]
     send_resp(conn, 200, body)
   end
 
   get "/update" do
       conn = Plug.Conn.fetch_query_params(conn)
-      id = Map.fetch!(conn.params, "id")                 # get id which needs to updated.
-      task = Map.fetch!(conn.params, "edit_data")        # fetch new task.
+      id = Map.fetch!(conn.params, "id")                           # get id which needs to updated.
+      task = to_string(Map.fetch!(conn.params, "edit_data"))       # fetch new task.
       update_task(id,task)
       body=EEx.eval_file "lib/templates/todohtml.html.leex"
       send_resp(conn, 200, body)
