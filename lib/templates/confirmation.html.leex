@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tasks to do today</title>
 </head>
 <style>
-@import url('https://css.gg/add.css');
-@import url('https://css.gg/trash.css');
-
+@import url('https://css.gg/check-o.css');
+@import url('https://css.gg/close-o.css');
 /* Basic Style */
 
 body {
@@ -19,6 +16,7 @@ body {
 	color: #333;
 	font-family: Lato, system-ui;
 	background-color:#5A5A5A;
+    text-align: center;
 }
 
 .container {
@@ -26,14 +24,14 @@ body {
 	width: 300px;
 	margin: 10px auto 100px;
 	background-color:cyan;
-	padding:0px 10px 10px 10px;
+	padding:0px 10px 20px 10px;
 	border-radius:10px
 }
 
 h2 {
 	text-align:center;
-	padding-top:20px;
-	margin-bottom:20px;
+	padding-top:10px;
+	margin-bottom:10px;
 }
 
 ul {
@@ -53,26 +51,31 @@ h3 {
 
 input,
 button {
-	outline: none;
+	outline: 10px;
+	background-color: cyan;
+	border: 0px;
 }
 
 button {
+    text-align: center;
 	background: white;
 	border: 1px solid green;
-	color: #000;
+	color: black;
 	font-size: 15px;
-	margin-left: 15px;
-	height: 40px;
-	font-family: Lato, system-ui;
+	width: 36px;
+	margin: 10px 0 0;
+	font-family: Lato, sans-serif;
 	cursor: pointer;
-	border-radius:20px
+    display: inline-block;
+	border-radius:20px;
+    margin-left: 10px;
+    height: 30px
 }
 
 button:hover {
   background-color: green;
   color: white;
 }
-
 
 /* Heading */
 
@@ -85,21 +88,19 @@ label[for='new-task'] {
 	padding: 0px 0 10px;
 	margin: 0;
 	text-transform: uppercase;
-	text-align: center;
 }
 
 input[type="text"] {
-	margin-left: 10px;
+	margin: 0;
 	font-size: 18px;
 	line-height: 18px;
 	height: 18px;
 	padding: 10px;
 	border: 1px solid #ddd;
 	background: #fff;
-	border-radius: 20px;
-	font-family: Lato, system-ui;
-	color: black;
-	margin-bottom: 20px
+	border-radius: 6px;
+	font-family: Lato, sans-serif;
+	color: #888;
 }
 
 input[type="text"]:focus {
@@ -116,7 +117,7 @@ label[for='new-task'] {
 
 input#new-task {
 	float: left;
-	width: 258px;
+	width: 375px;
 }
 
 p > button:hover {
@@ -176,7 +177,9 @@ ul li.editMode label {
 	display: none;
 }
 a:link, a:visited {
+  background-color: white;
   color: black;
+  border: 1px solid green;
   padding: 5px 20px;
   text-align: center;
   text-decoration: none;
@@ -188,41 +191,20 @@ a:hover, a:active {
   background-color: green;
   color: white;
 }
-.delete{
-	float: right;
-	margin-left: 10px;
-}
-.edit{
-	float: right;
-}
-.tasklist{
-	margin-bottom: 0px;
-	padding: 10px;
-
-}
-.listbox{
-	margin-top: 20px;
+.update{
+    width: 30px;
 }
 </style>
 <body>
     <div class="container">
-      <h2>TODO LIST</h2>
-      <h3>Add Task</h3>
-      <p>
-        <form action ="todohtml" class = "form" method ="get" >
-			<input id="new-task" type="text" name = "task">
-		</form>
-		<div class = "listbox">
-		<%= for todo <- Tododb.select_all do%>
-		<div class = "tasklist">
-		<%=todo.task_name%>
-		<a type="button" class="delete" href="confirmation?delete_id=<%= todo.id %>&delete_task=<%= todo.task_name %>"><i class="gg-trash"></i></a>
-		<a type="button" class="edit" href="edit?id=<%= todo.id %>&edit_data=<%= todo.task_name%>"><i class='fas fa-pen'></i></a>
+      <h2>Confirmation</h2>
 		<br>
+		<form name="form" action="update" method="get">
+        <input id="id" type="text" value=<%=id%> name="id" hidden>
+		<div name="edit_data"> <b> Are you sure you want to delete -  </b><%= task %></div>
 		<br>
-		<hr style = "border: 1px solid white;">
-		</div>
-		<% end %>
-		</div>
+            <button type="submit" formaction= "/delete"><i class="gg-check-o"></i></button>
+            <button type="submit" formaction= "/"><i class="gg-close-o"></i></button>
+        </form>
   </body>
 </html>

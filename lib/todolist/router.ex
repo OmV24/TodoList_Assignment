@@ -24,10 +24,18 @@ defmodule Todolist.Router do
 
   get "/delete" do
     conn = Plug.Conn.fetch_query_params(conn)
- 		id = Map.fetch!(conn.params, "delete_data")
+ 		id = Map.fetch!(conn.params, "id")
     IO.puts("#{id}")
     delete_task(id)
     body=EEx.eval_file "lib/templates/todohtml.html.leex"
+    send_resp(conn, 200, body)
+  end
+
+  get "/confirmation" do
+    conn = Plug.Conn.fetch_query_params(conn)
+    id = Map.fetch!(conn.params, "delete_id")
+    task = to_string(Map.fetch!(conn.params, "delete_task"))
+    body=EEx.eval_file "lib/templates/confirmation.html.leex",[task: task, id: id]
     send_resp(conn, 200, body)
   end
 

@@ -12,13 +12,13 @@
 body {
 	background: #fff;
 	color: #333;
-	font-family: Lato, sans-serif;
+	font-family: Lato, system-ui;
 	background-color:#5A5A5A;
 }
 
 .container {
 	display: block;
-	width: 400px;
+	width: 300px;
 	margin: 10px auto 100px;
 	background-color:cyan;
 	padding:0px 10px 20px 10px;
@@ -27,8 +27,8 @@ body {
 
 h2 {
 	text-align:center;
-	padding-top:10px;
-	margin-bottom:10px;
+	padding-top:20px;
+	margin-bottom:0px;
 }
 
 ul {
@@ -57,7 +57,7 @@ button {
     text-align: center;
 	background: white;
 	border: 1px solid green;
-	color: #888;
+	color: black;
 	font-size: 15px;
 	width: 70px;
 	margin: 10px 0 0;
@@ -65,7 +65,7 @@ button {
 	cursor: pointer;
     display: inline-block;
 	border-radius:20px;
-    margin-left: 170px;
+    margin-left: 122px;
     height: 30px
 }
 
@@ -96,9 +96,10 @@ input[type="text"] {
 	padding: 10px;
 	border: 1px solid #ddd;
 	background: #fff;
-	border-radius: 6px;
-	font-family: Lato, sans-serif;
-	color: #888;
+	border-radius: 20px;
+	font-family: Lato, system-ui;
+	color: black;
+	margin-bottom: 10px;
 }
 
 input[type="text"]:focus {
@@ -115,7 +116,7 @@ label[for='new-task'] {
 
 input#new-task {
 	float: left;
-	width: 375px;
+	width: 278px;
 }
 
 p > button:hover {
@@ -200,9 +201,7 @@ a:hover, a:active {
 		<br>
 		<form name="form" action="update" method="get">
         <input id="id" type="text" value=<%=id%> name="id" hidden>
-		<div name="edit_data"> <b>Task to be updated -  </b><%= edit_data %></div>
-		<br>
-            <input id="new-task" name="edit_data" type="text">
+            <input id="new-task" name="edit_data"  value=<%= edit_data %> type="text">
             <button type="submit">Update</button>
         </form>
   </body>
