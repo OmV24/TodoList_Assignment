@@ -32,8 +32,8 @@ body {
 
 h2 {
 	text-align:center;
-	padding-top:20px;
-	margin-bottom:20px;
+	padding-top:10px;
+	margin-bottom:15px;
 }
 
 ul {
@@ -185,7 +185,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  background-color: green;
+
   color: white;
 }
 .delete{
@@ -215,7 +215,13 @@ a:hover, a:active {
 		<div class = "listbox">
 		<%= for todo <- Tododb.select_all do%>
 		<div class = "tasklist">
-		<%=todo.task_name%>
+		<%= if todo.task_status=="incomplete" do%>
+		<a class="b" href="status?id=<%= todo.id %>&status=<%= todo.task_status %>"name="status" type="submit" value="<%= todo.task_status %>" style="text-decoration: none; color: black;"><b><%=todo.task_name %></b>
+		</li>
+  		<% else %>
+		<a class="b" href="status?id=<%= todo.id %>&status=<%= todo.task_status %>"name="status" type="submit" value="<%= todo.task_status %>"  style="text-decoration: none; text-decoration: line-through black;color: white;"><b><%=todo.task_name %></b>
+    	</a>
+  		<% end %>
 		<a type="button" class="delete" href="confirmation?delete_id=<%= todo.id %>&delete_task=<%= todo.task_name %>"><i class="gg-trash"></i></a>
 		<a type="button" class="edit" href="edit?id=<%= todo.id %>&edit_data=<%= todo.task_name%>"><i class='fas fa-pen'></i></a>
 		<br>
@@ -224,5 +230,12 @@ a:hover, a:active {
 		</div>
 		<% end %>
 		</div>
+	<h3>Completed Task</h3>
+		<br>
+		<%= for todo2 <- Tododb.completed_tasks do%>
+			<b><%=todo2.task_name %></b>
+			<br>
+			<hr style = "border: 1px solid white;">
+		<%end %>
   </body>
 </html>

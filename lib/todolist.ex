@@ -3,5 +3,6 @@ defmodule Todolist do
 
   schema "todo" do
     field :task_name, :string
+    field :task_status, :string
   end
 end
