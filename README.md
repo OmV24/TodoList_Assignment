@@ -30,37 +30,47 @@ Technologies used:
 
 5) The Todo List is generated: 
 
-   ![image](https://user-images.githubusercontent.com/100900392/210222616-a59b48f4-daa0-430d-83f8-3c651191985f.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210791615-469de29c-969e-4df9-a26f-813aa1850870.png)
 
 6) Adding Tasks:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210243575-87296efd-3580-4e18-b8a6-791e4e926596.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210791822-229f10bf-2153-416c-a180-bcc288f3998b.png)
 
 7) Updating Tasks:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210224655-5014495c-21f1-45e7-97bb-642f6dc12173.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210792018-3324bf29-3cf7-4252-bcc8-7141480db2ae.png)
 
     After Updating:
     
-   ![image](https://user-images.githubusercontent.com/100900392/210224723-c611d14d-d2ee-4a15-886a-4de95c95dc66.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210792165-c3cbfaa9-0771-4876-b0ba-8214319187eb.png)
    
 8) Deleting Tasks:
 
-   Before Deleting:
+   Delete Confirmation:
 
-   ![image](https://user-images.githubusercontent.com/100900392/210224739-5a2fd4b3-b914-4caf-aa7e-b7ca370b2c6c.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210792281-9b229a23-50da-483b-8e87-977d57bf258b.png)
 
    After Deleting:
    
-   ![image](https://user-images.githubusercontent.com/100900392/210224778-7aea1b4f-e4c5-43d8-9920-ebce4f0865d7.png)
+   ![image](https://user-images.githubusercontent.com/100900392/210792410-ff4ee6fe-5739-4ca3-97b4-2137145b6f01.png)
    
-9) Database:
+9) Task Status:
 
-   ![image](https://user-images.githubusercontent.com/100900392/210200166-8120489a-1ec2-479b-abfb-8c9277e178ad.png)
+   Before Completion:
    
-10) Unit Testing for Ecto:
+   ![image](https://user-images.githubusercontent.com/100900392/210792638-3f670386-3946-44f1-a92c-c5ac94b93c5e.png)
 
-   ![image](https://user-images.githubusercontent.com/100900392/207049415-9760dfbd-1b13-4944-b429-aee620965742.png)
+   After Completion:
+   
+   ![image](https://user-images.githubusercontent.com/100900392/210792807-169faaf7-f733-4d30-9503-2d0ec44b481a.png)
+ 
+10) Database:
+
+   ![image](https://user-images.githubusercontent.com/100900392/210792981-9f897061-637d-457d-8a48-6de5d118ff35.png)
+   
+11) Unit Testing for Ecto:
+
+   ![image](https://user-images.githubusercontent.com/100900392/210793187-ac3119de-eb66-4fd0-9254-a1fcf80ca4e9.png)
 
 # Features:
 
