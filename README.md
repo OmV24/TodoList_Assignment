@@ -35,6 +35,8 @@ Technologies used:
 6) Adding Tasks:
    
    ![image](https://user-images.githubusercontent.com/100900392/210791822-229f10bf-2153-416c-a180-bcc288f3998b.png)
+   
+   Press Enter to Add the Task.
 
 7) Updating Tasks:
     
